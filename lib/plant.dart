@@ -5,13 +5,8 @@ class Plant {
   int _health;
 
   // Constructor
-  Plant({
-    required this.name,
-    required this.type,
-    int growthStage = 0,
-    int health = 100,
-  })  : _growthStage = growthStage,
-        _health = health;
+  Plant({required this.name,required this.type,int growthStage = 0,int health = 100,})
+        : _growthStage = growthStage, _health = health;
 
   // getters
   int get growthStage => _growthStage;
