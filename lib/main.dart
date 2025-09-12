@@ -1,20 +1,24 @@
-import 'package:flutter/material.dart';
+import 'plant.dart';
 
 void main() {
-  runApp(const MainApp());
-}
+  print('--- Demo: Base Plant ---');
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  Plant plant1 = Plant(name: 'Rose', type: 'Flower Type Crop');
+  Plant plant2 = Plant(
+    name: 'Cactus',
+    type: 'Prickly Fruit',
+    growthStage: 3,
+    health: 80,
+  );
 
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
-  }
+  plant1.showInfo();
+  plant1.grow();
+  plant1.water(20);
+
+  print('Growth Stage of ${plant1.name}: ${plant1.growthStage}'); // getter
+  print('Health of ${plant1.name}: ${plant1.health}'); // gettr
+
+  plant2.showInfo();
+  plant2.grow();
+  plant2.water(-10);
 }
