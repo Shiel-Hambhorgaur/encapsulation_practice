@@ -19,7 +19,7 @@ void main() {
   plant2.water(-10);
 
   print('--- Demo: DivineRarity (derived) ---');
-  divine_rarity rareFlower = divine_rarity(name: 'Celestial Bloom', type: 'Rare Flower',seedValue: 250000,
+  DivineRarity rareFlower = DivineRarity(name: 'Celestial Bloom', type: 'Rare Flower',seedValue: 250000,
     growthStage: 4,
     health: 95,);
 

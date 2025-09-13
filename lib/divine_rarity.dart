@@ -1,9 +1,9 @@
 import 'plant.dart';
 
-class divine_rarity extends Plant {
+class DivineRarity extends Plant {
   final int seedValue;
 
-  divine_rarity({
+  DivineRarity({
     required String name,
     required String type,
     this.seedValue = 160000,
