@@ -1,10 +1,15 @@
 import 'plant.dart';
 
-class DivineRarityFlower extends Plant {
+class divine_rarity extends Plant {
   final int seedValue;
 
-  DivineRarityFlower({required String name,required String type,this.seedValue = 160000, int growthStage = 0, int health = 100,  }) 
-  : super(name: name, type: type, growthStage: growthStage, health: health);
+  divine_rarity({
+    required String name,
+    required String type,
+    this.seedValue = 160000,
+    int growthStage = 0,
+    int health = 100,
+  }) : super(name: name, type: type, growthStage: growthStage, health: health);
 
   void harvest() {
     if (growthStage >= 5 && health > 0) {
@@ -15,11 +20,11 @@ class DivineRarityFlower extends Plant {
       print('🌿 $name is not ready to harvest.');
     }
   }
-@override
-void showInfo() {
-  print(
-    "Plant name: $name | Type: $type | Growth Stage: $growthStage | Health: $health | Seed Value: $seedValue"
-  );
 
+  @override
+  void showInfo() {
+    print(
+      "Plant name: $name | Type: $type | Growth Stage: $growthStage | Health: $health | Seed Value: $seedValue"
+    );
   }
 }
