@@ -11,6 +11,8 @@ class Plant {
   // getters
   int get growthStage => _growthStage;
   int get health => _health;
+ 
+
 
   // Method 1 tubo
   void grow() {
