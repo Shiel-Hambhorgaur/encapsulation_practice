@@ -1,3 +1,4 @@
+import 'flowertype_crop.dart';
 import 'plant.dart';
 import 'DivineRarityFlower.dart';
 
@@ -151,6 +152,7 @@ void main() {
     }
     print('---');
   }
+  
 
   print('\n--- Final Encapsulation Demonstration ---');
   print('Accessing properties through getters:');
@@ -176,4 +178,18 @@ void main() {
   print('  - Private properties (_seedValue, _flowerColor, _isBloomingNow)');
   print('  - Controlled access through getters and setters');
   print('  - Data validation prevents invalid states');
+// --- Demo: Derived Class (FlowertypeCrop) ---
+print('\n--- Demo: Derived Class (FlowertypeCrop) ---');
+
+FlowertypeCrop rose = FlowertypeCrop(name: "Rose", type: "Flower Type Crop", fragranceIntensity: 7);
+
+rose.showInfo(); // Show initial state
+rose.smell();    // Your unique method
+
+for (int i = 0; i < 5; i++) {
+  rose.grow();   // Should reach stage 5 and print blooming message
+}
+
+rose.showInfo(); // Final state
+
 }
