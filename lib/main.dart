@@ -1,6 +1,7 @@
 import 'flowertype_crop.dart';
 import 'plant.dart';
 import 'pricklyfruit.dart';
+import 'divine_rarity.dart';
 
 void main() {
   print('--- Demo: Base Plant ---');
@@ -36,4 +37,21 @@ void main() {
     rose.grow();   // Should reach stage 5 and print blooming message
   }
   rose.showInfo(); // Final state
+
+  print('--- Demo: DivineRarity (derived) ---');
+  DivineRarity rareFlower = DivineRarity(
+    name: 'Celestial Bloom',
+    type: 'Rare Flower',
+    seedValue: 250000,
+    growthStage: 4,
+    health: 95,
+  );
+
+  rareFlower.showInfo(); // overridden 
+  rareFlower.grow(); // inherited 
+  rareFlower.harvest(); // unique
+
+  // Grow and harvest
+  rareFlower.grow();
+  rareFlower.harvest();
 }
