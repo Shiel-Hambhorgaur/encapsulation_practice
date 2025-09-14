@@ -1,16 +1,10 @@
-import 'flowertype_crop.dart';
 import 'plant.dart';
 
 void main() {
   print('--- Demo: Base Plant ---');
 
   Plant plant1 = Plant(name: 'Rose', type: 'Flower Type Crop');
-  Plant plant2 = Plant(
-    name: 'Cactus',
-    type: 'Prickly Fruit',
-    growthStage: 3,
-    health: 80,
-  );
+  Plant plant2 = Plant(name: 'Cactus',type: 'Prickly Fruit',growthStage: 3,health: 80,);
 
   plant1.showInfo();
   plant1.grow();
@@ -22,18 +16,4 @@ void main() {
   plant2.showInfo();
   plant2.grow();
   plant2.water(-10);
-  // --- Demo: Derived Class (FlowertypeCrop) ---
-  print('\n--- Demo: Derived Class (FlowertypeCrop) ---');
-
-  FlowertypeCrop rose = FlowertypeCrop(name: "Rose", type: "Flower Type Crop", fragranceIntensity: 7);
-
-  rose.showInfo(); // Show initial state
-  rose.smell();    // Your unique method
-
-  for (int i = 0; i < 5; i++) {
-  rose.grow();   // Should reach stage 5 and print blooming message
-  } 
-
-  rose.showInfo(); // Final state
-
 }
