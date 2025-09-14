@@ -1,5 +1,5 @@
-import 'flowertype_crop.dart';
 import 'plant.dart';
+import 'flowertype_crop.dart';
 import 'pricklyfruit.dart';
 import 'divine_rarity.dart';
 
@@ -21,10 +21,10 @@ void main() {
   plant2.water(-10);
 
   print('--- Demo: PricklyFruit (derived) ---');
-  PricklyFruit dragonFruit = PricklyFruit(name: 'Dragon Fruit', type: 'Prickly Fruit', spikeLength: 7.5);
-  dragonFruit.showInfo(); // gi override
-  dragonFruit.grow(); // gi override
-  dragonFruit.displaySpikes(); // unique method 
+  PricklyFruit cactus = PricklyFruit(name: 'Cactus', type: 'Prickly Fruit', spikeLength: 7.5);
+  cactus.showInfo(); // gi override
+  cactus.grow(); // gi override
+  cactus.displaySpikes(); // unique method 
 
   print('\n--- Demo: Derived Class (FlowertypeCrop) ---');
 
@@ -39,18 +39,12 @@ void main() {
   rose.showInfo(); // Final state
 
   print('--- Demo: DivineRarity (derived) ---');
-  DivineRarity rareFlower = DivineRarity(
-    name: 'Celestial Bloom',
-    type: 'Rare Flower',
-    seedValue: 250000,
-    growthStage: 4,
-    health: 95,
-  );
+  DivineRarity rareFlower = DivineRarity(name: 'Sunflower',type: 'Rare Flower',seedValue: 250000,
+    growthStage: 4,health: 95,);
 
   rareFlower.showInfo(); // overridden 
   rareFlower.grow(); // inherited 
   rareFlower.harvest(); // unique
-
   // Grow and harvest
   rareFlower.grow();
   rareFlower.harvest();
