@@ -20,8 +20,8 @@ void main() {
 
 
   print('--- Demo: PricklyFruit (derived) ---');
-  PricklyFruit dragonFruit = PricklyFruit(name: 'Dragon Fruit', type: 'Prickly Fruit', spikeLength: 7.5);
-  dragonFruit.showInfo(); // gi override
-  dragonFruit.grow(); // gi ovveride
-  dragonFruit.displaySpikes(); // unique method 
+  PricklyFruit cactus = PricklyFruit(name: 'Cactus', type: 'Prickly Fruit', spikeLength: 7.5);
+  cactus.showInfo(); // gi override
+  cactus.grow(); // gi ovveride
+  cactus.displaySpikes(); // unique method 
 }
